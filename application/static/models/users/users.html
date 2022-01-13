@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Users</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">  
+</head>
+<body>
+    <div class="customCard">
+        <div class="row">
+            <div id="users" class="col-sm-4 box">
+                
+            </div>
+            <div id = "addform">
+                <div><label>Delete user</label></div>
+                <br>
+                    
+                <label for="id">User Id</label>
+                <input type="text" id="id1">
+               
+
+                <div><label></label></div>
+                <button type = "submit" onclick = "deleteUser()" >Delete user</button>
+                <br>
+                <br>                
+
+                <div><label>Ban user</label></div>
+                <br>
+                    
+                <div>
+                <label for="id">User Id</label>
+                <input type="text" id="id2">
+                </div>
+
+                <div><label></label></div>
+                <button type = "submit" onclick = "banUser()" >Ban user</button>
+                <br>
+                <br>                
+
+                <div><label>Unban user</label></div>
+                <br>
+                    
+                <div>
+                <label for="id">User Id</label>
+                <input type="text" id="id3">
+                </div>
+     
+                <div><label></label></div>
+                <button type = "submit" onclick = "unBanUser()" >Unban user</button>
+        </div>
+        </div>
+    </div>
+    <script src="users.js"></script>
+    
+</body>
+</html>
