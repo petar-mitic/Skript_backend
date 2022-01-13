@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Trucks</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">  
+</head>
+<body>
+    <div class="customCard">
+        <div class="row">
+            <div id="trucks" class="col-sm-4 box">
+                
+            </div>
+            <div id = "addform">
+                <div><label>Add truck</label></div>
+                <br>
+                    
+                <label for="brand">Brand</label>
+                <input type="text" id="brand1">
+               
+                <div>
+                <label for="model">Model</label>
+                <input type="text" id="model1">
+                </div>
+               
+                <div>
+                <label for="year">Year</label>
+                <input type="text" id="year1">
+                </div>
+               
+                <div>
+                <label for="range">Range</label>
+                <input type="text" id="range1">
+                </div>
+           
+                <div>
+                <label for="price">Price</abel>
+                <input type="text" id="price1">
+                </div>
+
+                <div><label></label></div>
+                <button type = "submit" onclick = "addEntry()" >Add</button>
+                <br>
+                <br>                
+
+                <div><label>Update truck</label></div>
+                <br>
+                    
+                <div>
+                <label for="id">truckId</label>
+                <input type="text" id="id2">
+                </div>
+
+                <div>
+                <label for="brand">Brand</label>
+                <input type="text" id="brand2">
+                </div>
+               
+                <div>
+                <label for="model">Model</label>
+                <input type="text" id="model2">
+                </div>
+               
+                <div>
+                <label for="year">Year</label>
+                <input type="text" id="year2">
+                </div>
+               
+                <div>
+                <label for="range">Range</label>
+                <input type="text" id="range2">
+                </div>
+           
+                <div>
+                <label for="price">Price</abel>
+                <input type="text" id="price2">
+                </div>
+
+                <div><label></label></div>
+                <button type = "submit" onclick = "editEntry()" >Update</button>
+                <br>
+                <br>                
+
+                <div><label>Delete truck</label></div>
+                <br>
+                    
+                <div>
+                <label for="id">truckId</label>
+                <input type="text" id="id3">
+                </div>
+     
+                <div><label></label></div>
+                <button type = "submit" onclick = "deleteEntry()" >Delete</button>
+        </div>
+        </div>
+    </div>
+    <script src="trucks.js"></script>
+    
+</body>
+</html>

@@ -23,7 +23,7 @@ export const verify = (req, res, next) => {
 
 export const checkAdmin = (req, res, next) => {
     if(req.headers.userType != "ADMINISTRATOR"){
-        res.status(403).json({message: "Only administrator can perform this action"});
+        res.status(403).json({message: "Samo administrator moze upravljati user-ima"});
         return;
     }
     next();

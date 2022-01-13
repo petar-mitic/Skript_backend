@@ -14,19 +14,19 @@ router.get("/login", (req, res) => {
 });
 
 router.get("/cars", (req, res) => {
-  res.sendFile("cars.html", { root: "./static" });
+  res.sendFile("models/cars/cars.html", { root: "./static" });
 });
 
 router.get("/trucks", (req, res) => {
-  res.sendFile("trucks.html", { root: "./static" });
+  res.sendFile("models/trucks/trucks.html", { root: "./static" });
 });
 
 router.get("/motors", (req, res) => {
-  res.sendFile("motors.html", { root: "./static" });
+  res.sendFile("models/motors/motors.html", { root: "./static" });
 });
 
 router.get("/users", (req, res) => {
-  res.sendFile("users.html", { root: "./static" });
+  res.sendFile("models/users/users.html", { root: "./static" });
 });
 
 export default router;

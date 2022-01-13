@@ -1,6 +1,3 @@
-// var carData = document.querySelector(".box");
-// var carDetail = JSON.parse(localStorage.getItem("cars"));
-
 const addEntry = () => {
 
     const brand = document.getElementById("brand1").value;
@@ -18,7 +15,7 @@ const addEntry = () => {
     };
   
     const token = JSON.parse(localStorage.getItem("token"));
-    fetch("http://localhost:3000/admin/cars/add", {
+    fetch("http://localhost:3000/cars/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
