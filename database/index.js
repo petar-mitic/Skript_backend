@@ -3,6 +3,7 @@ import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import adminRoutes from './routes/adminroutes.js'
+import goHome from "./routes/homeroute.js";
 
 dotenv.config();
 
@@ -11,6 +12,7 @@ const app = express();
 app.use(express.json({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
+app.use("/", goHome);
 app.use("/", adminRoutes);
 
 const PORT = process.env.PORT;
