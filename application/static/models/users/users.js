@@ -81,3 +81,24 @@ const banUser = () => {
         }
       });
   };
+
+  const showUsers = () =>  {
+
+    const token = JSON.parse(localStorage.getItem("token"));
+    fetch('http://localhost:3000/users/get', {
+      method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `${token}`,
+        }
+    })
+        .then( res => res.json() )
+        .then( data => {
+            const allCars = document.getElementById('getUsers');
+
+            data.forEach( el => {
+                allCars.innerHTML += `<li>userId: ${el._id}, username: ${el.username}, 
+                    password: ${el.password}, userType: ${el.userType}, is user Banned: ${el.isBanned}</li>`;
+            });
+        });
+      }

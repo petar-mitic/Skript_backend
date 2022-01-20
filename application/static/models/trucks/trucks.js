@@ -106,3 +106,24 @@ const addEntry = () => {
     }
     return false;
   };
+
+  const showTrucks = () =>  {
+
+    const token = JSON.parse(localStorage.getItem("token"));
+    fetch('http://localhost:3000/trucks/get', {
+      method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `${token}`,
+        }
+    })
+        .then( res => res.json() )
+        .then( data => {
+            const allCars = document.getElementById('getTrucks');
+
+            data.forEach( el => {
+                allCars.innerHTML += `<li>truckId: ${el._id}, brand: ${el.brand}, 
+                    model: ${el.model}, year: ${el.year}, range: ${el.range}, price: ${el.price} </li>`;
+            });
+        });
+      }

@@ -106,3 +106,24 @@ const addEntry = () => {
     }
     return false;
   };
+
+  const showMotors = () =>  {
+
+    const token = JSON.parse(localStorage.getItem("token"));
+    fetch('http://localhost:3000/motors/get', {
+      method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `${token}`,
+        }
+    })
+        .then( res => res.json() )
+        .then( data => {
+            const allMotors = document.getElementById('getMotors');
+
+            data.forEach( el => {
+                allMotors.innerHTML += `<li>motorId: ${el._id}, brand: ${el.brand}, 
+                    model: ${el.model}, year: ${el.year}, range: ${el.range}, price: ${el.price} </li>`;
+            });
+        });
+      }
