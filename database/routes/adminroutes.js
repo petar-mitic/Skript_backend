@@ -8,17 +8,17 @@ import {verify, checkAdmin} from '../verification/auth.js';
 
 const router = express.Router();
 
-router.get("/cars/get", verify, getCar);
+router.get("/cars/get" ,getCar);
 router.post("/cars/update", verify, updateCar);
 router.delete("/cars/delete",verify, deleteCar);
 router.post("/cars/add",verify, addCar);
 
-router.get("/motors/get",verify, getMotor);
+router.get("/motors/get", getMotor);
 router.post("/motors/update",verify, updateMotor);
 router.delete("/motors/delete",verify, deleteMotor);
 router.post("/motors/add",verify, addMotor);
 
-router.get("/trucks/get",verify, getTruck);
+router.get("/trucks/get", getTruck);
 router.post("/trucks/update",verify, updateTruck);
 router.delete("/trucks/delete",verify, deleteTruck);
 router.post("/trucks/add",verify, addTruck);

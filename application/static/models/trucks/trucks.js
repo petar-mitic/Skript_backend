@@ -74,6 +74,16 @@ const addEntry = () => {
 
     const truckId = document.getElementById("id3").value;
 
+    // if(isNaN(truckId) == true) {
+    //   alert("truck id mora biti broj");
+    //   return;
+    // }
+
+  //   if(! Number.isInteger(truckId)){
+  //     alert("id mora biti broj");
+  //     return;
+  // }
+
     const requestData = {
         truckId: truckId,
     };

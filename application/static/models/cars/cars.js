@@ -41,6 +41,9 @@ const addEntry = () => {
     const year = document.getElementById("year2").value;
     const range = document.getElementById("range2").value;
     const price = document.getElementById("price2").value;
+    
+    
+
   
     const requestData = {
         carId : carId,
